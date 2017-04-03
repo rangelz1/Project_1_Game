@@ -1,37 +1,74 @@
-$(document).ready(function() {
+var gameCount = 0,
+var gamePossibilities: ['#green','#blue', '#red', '#yellow'], 
+var gameCurrentGame: [],
+var gamePlayer: [],
+var gameStrict: false,
+var gameSound:{
+    blue: new Audio(''), 
+    red: new Audio(''), 
+    yellow: new Audio(''), 
+    green: new Audio('')
+  },
+
+function clearGame() {
+ 
+}
+
+function newGame() {
   
-$(function() {
+}
 
-  $('#addHome').removeClass('btn-danger').addClass('btn-success');
+function strict() {
+}
 
-  var $newLink = $( '<br><br><a id="zillowLink" href="http://www.zillow.com">Visit Zillow.com<a>' );
-  $('body').append($newLink);
-  $('#zilliowLink').attr('target', '_blank');
+function showMoves() {
+}
 
-});
+function sound(name) {
+  switch(name) {
+    case'#green':
+      gameSound.green.play();
+      break;
+    case '#blue':
+      gameSound.blue.play();
+      break;
+    case '#red':
+      gameSound.red.play();
+      break;
+    case '#yellow':
+      gameSound.yellow.play();
+      break;
+  };
+}
 
-  $('#homes').on('click', 'button', function() {
-    $(this).closest('tr').fadeOut(1000, function() {
-      // now that the tr is hidden, let's completely remove it from the DOM
-      $(this).remove();
-    });
-  });
+function playGame(field) {
 
-  var newHomes = [
-  {address: "27569 Cedarwood Drive", sf: "2,535", bedrooms: 3, baths: 2.5, price: "$496,500"},
-  {address: "316 Annandale Drive", sf: "1,326", bedrooms: 4, baths: 2, price: "$275,000"},
-  {address: "251 Grandview Road", sf: "3,800", bedrooms: 3, baths: 2, price: "$699,900"},
-  {address: "28571 Manitoba", sf: "2,960", bedrooms: 4, baths: 3.5, price: "$775,000"}
-];
+}
 
-$('#addHome').on('click', 'button', function() {
-     $('tr').append($newHomes); 
-  });
+function clearPlayer() {
+  game.player = [];
+}
 
+function addToPlayer(id) {
+ 
+} 
 
+function playerTurn(x) {
+ 
+} 
 
-});
+function nextLevel() {
+  addCount();
+}
 
-// or, the shortcut version
+function generateMove(){
+ 
+}
+
+function addCount() {
+ 
+}
+
+newGame();
 
 
