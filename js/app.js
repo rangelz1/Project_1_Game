@@ -1,15 +1,16 @@
-var gameCount = 0,
-var gamePossibilities: ['#green','#blue', '#red', '#yellow'], 
-var gameCurrentGame: [],
-var gamePlayer: [],
-var gameStrict: false,
-var gameSound:{
-    blue: new Audio(''), 
-    red: new Audio(''), 
-    yellow: new Audio(''), 
-    green: new Audio('')
+var game = {
+  count: 0,
+  possibilities: ['#green','#blue', '#red', '#yellow'],
+  currentGame: [],
+  player: [],
+  sound:{
+    blue: new Audio('sounds/sounds_01.mp3'), 
+    red: new Audio('sounds/sounds_02.mp3'), 
+    yellow: new Audio('sounds/sounds_03.mp3'), 
+    green: new Audio('sounds/sounds_04.mp3')
   },
-
+  strict: false,
+}
 function clearGame() {
  
 }
@@ -27,16 +28,16 @@ function showMoves() {
 function sound(name) {
   switch(name) {
     case'#green':
-      gameSound.green.play();
+      game.sound.green.play();
       break;
     case '#blue':
-      gameSound.blue.play();
+      game.sound.blue.play();
       break;
     case '#red':
-      gameSound.red.play();
+      game.sound.red.play();
       break;
-    case '#yellow':
-      gameSound.yellow.play();
+    case '#dark':
+      game.sound.yellow.play();
       break;
   };
 }
