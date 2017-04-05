@@ -56,18 +56,6 @@ a {
 }
 
 
-.gamebutton {
-  text-align: center;
-  margin: 5px;
-  box-shadow: 10px 10px 40px #1c1c1c;
-  -webkit-transition: -webkit-transform 1s;
-  -ms-transition: -ms-transform 1s;
-  -o-transition: -o-transform 1s;
-  -moz-transition: -moz-transform 1s;
-  transition: transform 1s;
-  border-radius: 50px;
-}
-
 
 canvas:hover {
   height: 199px;
@@ -95,14 +83,50 @@ canvas:hover {
   background-color: #FFD700;
 }
 
-button
+button .btn-warning
 {
-  border: 0;
+  border: 1px;
+  text-decoration-color: white;
   text-align: center;
   margin-top: 15px;
   width: 300px;
   height: 50px;
-  background-color: #FF0000;
+  background-color: red;
+  box-shadow: 10px 10px 40px #1c1c1c;
+  -webkit-transition: -webkit-transform 1s;
+  -ms-transition: -ms-transform 1s;
+  -o-transition: -o-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  transition: transform 1s;
+  border-radius: 50px;
+} 
+
+button:hover { 
+  opacity: 0.7;
+}
+
+.game-info button {
+  width: 5em;
+  box-sizing: border-box;
+  font-size: 1.4em;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #6DABE8;
+  border: none;
+  padding: 0.3em 0.6em;
+}
+
+.game-info button:hover {
+  background: #78BCFF;
+}
+
+.tile.lit {
+  opacity: 1;
+} 
+
+canvas {
+  text-align: center;
+  margin: 5px;
   box-shadow: 10px 10px 40px #1c1c1c;
   -webkit-transition: -webkit-transform 1s;
   -ms-transition: -ms-transform 1s;
@@ -111,10 +135,5 @@ button
   transition: transform 1s;
   border-radius: 50px;
 }
-
-button:hover { 
-  opacity: 0.7;
-}
-
 
 
