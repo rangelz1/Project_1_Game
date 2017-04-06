@@ -5,8 +5,14 @@
 
 You will hear and see a series of tones and lights and you are required to repeat the series. If you succeed the series becomes progressively longer and more complex. If you fail, the game is over.
 
-##Update for April 4
+## Update for April 4
 
 Audio has been installed and new round update in progress.
 
-Also, jQuery library has been added to main folder.
+## Technology used
+
+jQuery library has been added to main folder.
+
+## Update for April 5 
+
+Start and reset buttons introdused.
