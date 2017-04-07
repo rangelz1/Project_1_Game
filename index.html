@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <title>Simon App</title>
@@ -33,5 +34,50 @@
         <h4 class="text-center">You will hear and see a series of tones and lights and you are required to repeat the series. <br/>Each time you succeed, the series becomes progressively longer and more complex. If you reach round 20, you win the game.</h4>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+=======
+  <head>
+    <meta charset="UTF-8">
+    <title>Simon App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <script type="text/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <h1>Project 1 Game</h1>
+    <h2 class="text-center">Simon</h2>
+    <!-- Board game  -->
+     <div class="game-board">
+        <div class="simon">
+            <div id="canvasDiv" width="500" height="500">
+                <canvas id="blue" class="button" width="200" height="200"></canvas>
+                <canvas id="green" class="button" width="200" height="200" )></canvas>
+                <br/>
+                <canvas id="red" class="button" width="200" height="200"></canvas>
+                <canvas id="yellow" class="button" width="200" height="200"></canvas>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- End end of Board game -->
+
+    <div class="game-info">
+        <h2>Round: <span id="counter">00</span></h2>
+        <button class="start" id="start"> Start</button>
+        <button class="reset" id="reset"> Reset</button>
+    </div>
+      <br/>
+      <div data-action="sound"></div>
+      <h3 class="text-center">How to play the game</h3>
+      <h4 class="text-center">You will hear and see a series of tones and lights and you are required to repeat the series. <br/>If you succeed the series becomes progressively longer and more complex. If you fail, the game is over.</h4>
+      
+      
+      <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+      
+>>>>>>> c8768ec61d18a0e35bcdeceaf334129c9de8fce6
     </body>
 </html>
