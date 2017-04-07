@@ -8,6 +8,7 @@ body {
   text-align: center;
 } 
 
+
 h1 {
   color: #1fa7e8;
   font: 80px tahoma;
@@ -55,12 +56,17 @@ a {
   font-family: 'Exo 2', sans-serif;
 }
 
-
-
-canvas:hover {
-  height: 199px;
-  opacity: 0.5;
-  width: 201px;
+button {
+  
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 40px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    width: 100%;
 }
 
 
@@ -83,29 +89,14 @@ canvas:hover {
   background-color: #FFD700;
 }
 
-button .btn-warning
-{
-  border: 1px;
-  text-decoration-color: white;
-  text-align: center;
-  margin-top: 15px;
-  width: 300px;
-  height: 50px;
-  background-color: red;
-  box-shadow: 10px 10px 40px #1c1c1c;
-  -webkit-transition: -webkit-transform 1s;
-  -ms-transition: -ms-transform 1s;
-  -o-transition: -o-transform 1s;
-  -moz-transition: -moz-transform 1s;
-  transition: transform 1s;
-  border-radius: 50px;
-} 
-
-button:hover { 
-  opacity: 0.7;
+ 
+.gamebutton{
+  opacity: 0.5;
+  cursor: pointer;
 }
 
-.game-info button {
+
+ .game-info button {
   width: 5em;
   box-sizing: border-box;
   font-size: 1.4em;
@@ -116,13 +107,11 @@ button:hover {
   padding: 0.3em 0.6em;
 }
 
-.game-info button:hover {
-  background: #78BCFF;
-}
 
-.tile.lit {
+.lit {
   opacity: 1;
 } 
+
 
 canvas {
   text-align: center;

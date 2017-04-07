@@ -1,6 +1,7 @@
+
 var game = {
   round: 0,
-  possibilities: ['#green','#blue', '#red', '#yellow'],
+  colors: ['#green','#blue', '#red', '#yellow'],
   sequence: [],
   player: [],
   sound:{
@@ -54,10 +55,10 @@ function sound(name) {
 }
 
 function playGame(field) {
-  $(field).addClass('hover');
+  $(field).addClass('lit');
   sound(field);
   setTimeout(function(){
-      $(field).removeClass('hover');
+      $(field).removeClass('lit');
   }, 300);
 }
 
@@ -65,9 +66,8 @@ function clearPlayer() {
   game.player = [];
 }
 
-function addToPlayer(id) {
+function gameClick(id) {
   var field = "#"+id
-  console.log(field);
   game.player.push(field);
   playerTurn(field);
 } 
@@ -75,21 +75,18 @@ function addToPlayer(id) {
 function playerTurn(x) {
   if (game.player[game.player.length - 1] !== game.sequence[game.player.length - 1]) {
     if(game.strict){
-      alert('Try again! ...From scratch!');
       newGame();
     } else {
-      alert('Wrong move! Try again!');
+      alert('Sorry! Please try again!');
       showMoves();
     }
    } else {
-      console.log('Good Move!');
       sound(x);
       var check = game.player.length === game.sequence.length;
       if (check) {
         if(game.round == 20){
           alert('You won! Congrats.');
         } else {
-          alert('Next round!');
           nextLevel();
         }
       }
@@ -101,17 +98,17 @@ function nextLevel() {
 }
 
 function generateMove(){
-  game.sequence.push(game.possibilities[(Math.floor(Math.random()*4))]);
-  //alert(game.sequence.length);
+  game.sequence.push(game.colors[(Math.floor(Math.random()*4))]);
   showMoves();
 }
 
 function addCount() {
   game.round++;
-  $('#clickNumber').addClass('animated fadeOutDown');
+  $('#roundNumber').addClass('animated fadeOutDown');
   
   setTimeout(function(){
-    $('#clickNumber').removeClass('fadeOutDown').html(game.round).addClass('fadeInDown');
+  
+  $('#roundNumber').removeClass('fadeOutDown').html(game.round).addClass('fadeInDown');
   }, 200);
   
   generateMove();
